@@ -68,7 +68,8 @@ public class User implements Serializable {
 
     private String price;
 
-    private String publisher;
+    @Column(unique = true)
+    private String ISBN;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = true)

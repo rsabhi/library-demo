@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Column;
 import javax.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -34,7 +35,8 @@ public class Book implements Serializable {
 
   private String price;
 
-  private String publisher;
+  @Column(unique = true)
+  private String ISBN;
 
   @ManyToOne
   @JoinColumn(name = "user_id", nullable = true)

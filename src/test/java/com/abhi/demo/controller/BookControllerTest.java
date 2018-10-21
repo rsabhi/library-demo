@@ -32,16 +32,16 @@ public class BookControllerTest {
   public void testGetAll() throws Exception {
     Book book = new Book();
     book.setId(1);
-    book.setName("Effective Java");
-    book.setAuthor("Joshua");
-    book.setPublisher("Unknown");
+    book.setName("Effective database");
+    book.setAuthor("ManuRS");
+    book.setISBN("1212121234");
     Set<Book> books = Collections.singleton(book);
     when(service.getAll()).thenReturn(books);
     mockMvc.perform(get("/books")).andExpect(status().isOk())
         .andExpect(jsonPath("$[0].id").value(1))
-        .andExpect(jsonPath("$[0].name").value("Effective Java")).andExpect(
-        jsonPath("$[0].author").value("Joshua"))
-        .andExpect(jsonPath("$[0].publisher").value("Unknown"));
+        .andExpect(jsonPath("$[0].name").value("Effective database")).andExpect(
+        jsonPath("$[0].author").value("ManuRS"))
+        .andExpect(jsonPath("$[0].ISBN").value("1212121234"));
   }
 
   @Test
@@ -50,12 +50,12 @@ public class BookControllerTest {
     book.setId(1);
     book.setName("Harry Potter I");
     book.setAuthor("J.K Rowling");
-    book.setPublisher("Unknown");
+    book.setISBN("8766665544");
     when(service.get(anyLong())).thenReturn(book);
     mockMvc.perform(get("/books/1")).andExpect(status().isOk())
         .andExpect(jsonPath("$.id").value(1))
         .andExpect(jsonPath("$.name").value("Harry Potter I")).andExpect(
         jsonPath("$.author").value("J.K Rowling"))
-        .andExpect(jsonPath("$.publisher").value("Unknown"));
+        .andExpect(jsonPath("$.ISBN").value("8766665544"));
   }
 }
