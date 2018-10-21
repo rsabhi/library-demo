@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <springProperty name="appName" source="spring.application.name"/>
+
+  <property name="FILE_LOG_PATTERN"
+    value="%date %-5level [%thread] %logger{10} [%file:%line] [traceId=%X{X-B3-TraceId:-}, spanId=%X{X-B3-SpanId:-}] %msg%n"/>
+
+  <property name="CONSOLE_LOG_PATTERN" value="${FILE_LOG_PATTERN}"/>
+
+  <property name="LOG_FILE" value="./log/${appName}"/>
+
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <encoder>
+      <pattern>${FILE_LOG_PATTERN}</pattern>
+    </encoder>
+    <file>${LOG_FILE}.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+      <fileNamePattern>${LOG_FILE}.%i.log.gz</fileNamePattern>
+      <minIndex>0</minIndex>
+      <maxIndex>15</maxIndex>
+    </rollingPolicy>
+    <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      <maxFileSize>50MB</maxFileSize>
+    </triggeringPolicy>
+  </appender>
+
+  <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+      <charset>utf8</charset>
+    </encoder>
+  </appender>
+
+  <root level="WARN">
+    <appender-ref ref="CONSOLE"/>
+    <!--<appender-ref ref="FILE"/>-->
+  </root>
+</configuration>

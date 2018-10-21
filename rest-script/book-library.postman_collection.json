@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "983d583c-ced1-4875-8490-405355bf8c2a",
+		"name": "book-library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/demo/users/batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"id\": 1,\n    \"name\": \"User1\",\n    \"gender\": \"Female\",\n    \"address\": \"CA\",\n    \"phoneNumber\": \"123456789\"\n  },\n  {\n    \"id\": 2,\n    \"name\": \"User2\",\n    \"gender\": \"Male\",\n    \"address\": \"CA\",\n    \"phoneNumber\": \"123456789\"\n  },\n  {\n    \"name\": \"User3\",\n    \"gender\": \"Female\",\n    \"address\": \"NC\",\n    \"phoneNumber\": \"123456789\"\n  },\n  {\n    \"name\": \"User4\",\n    \"gender\": \"Male\",\n    \"address\": \"NC\",\n    \"phoneNumber\": \"123456789\"\n  },\n  {\n    \"name\": \"User5\",\n    \"gender\": \"Male\",\n    \"address\": \"NC\",\n    \"phoneNumber\": \"123456789\"\n  },\n  {\n    \"name\": \"User6\",\n    \"gender\": \"Male\",\n    \"address\": \"NC\",\n    \"phoneNumber\": \"123456789\"\n  },\n  {\n    \"name\": \"User7\",\n    \"gender\": \"Male\",\n    \"address\": \"NC\",\n    \"phoneNumber\": \"123456789\"\n  },\n  {\n    \"name\": \"User8\",\n    \"gender\": \"Male\",\n    \"address\": \"NC\",\n    \"phoneNumber\": \"123456789\"\n  },\n  {\n    \"name\": \"User9\",\n    \"gender\": \"Male\",\n    \"address\": \"NC\",\n    \"phoneNumber\": \"123456789\"\n  },\n  {\n    \"name\": \"User10\",\n    \"gender\": \"Male\",\n    \"address\": \"NC\",\n    \"phoneNumber\": \"123456789\"\n  }\n]"
+				},
+				"url": {
+					"raw": "localhost:18082/demo/users/batch",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"demo",
+						"users",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/demo/books/batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 1,\n        \"name\": \"Harry Potter 1\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Harry Potter 2\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\":\n        {\n          \"id\": 1\n        }\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Harry Potter 3\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": \n        {\n          \"id\": 2\n        }\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Harry Potter 4\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": \n        {\n          \"id\": 1\n        }\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Harry Potter 5\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$20.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": \n        {\n          \"id\": 2\n        }\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Harry Potter 6\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Harry Potter 7\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 8\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 9\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 10\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 11\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 12\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 13\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 14\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 15\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 16\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 17\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 18\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 19\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    },\n    {\n        \"name\": \"Harry Potter 20\",\n        \"author\": \"J.K. Rowling\",\n        \"price\": \"$100.00\",\n        \"publisher\": \"Scholastic\",\n        \"borrower\": null\n    }\n]"
+				},
+				"url": {
+					"raw": "localhost:18082/demo/books/batch",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"demo",
+						"books",
+						"batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/demo/books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:18082/demo/books",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"demo",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/demo/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:18082/demo/users",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"demo",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/demo/books",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Harry Potter 1\",\n\t\"author\": \"J.K.Rolling\",\n\t\"price\": \"$40.00\",\n\t\"publisher\": \"O'Really\",\n\t\"borrower\": {\n\t\t\"id\": 1\n\t}\n}"
+				},
+				"url": {
+					"raw": "localhost:18082/demo/books",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"demo",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/demo/user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Jasmine Liu\",\n\t\"gender\": \"Female\",\n\t\"address\":\"aaa\",\n\t\"phoneNumber\": \"123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:18082/demo/users",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"demo",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/demo/books/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:18082/demo/books/1",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"demo",
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/demo/user/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:18082/demo/users/1",
+					"host": [
+						"localhost"
+					],
+					"port": "18082",
+					"path": [
+						"demo",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
