@@ -7,4 +7,4 @@ Run command ```mvn jetty:run``` to start the web application.
 Using your web to visit: http://localhost:18082/demo/
 
 ## How to prepare data?
-Using a POSTMAN to import book-library.postman_collection.json and run the script.
+Using a POSTMAN to import [book-library.postman_collection.json](https://github.com/rsabhi/library-demo/blob/master/rest-script/book-library.postman_collection.json) and run the script.
