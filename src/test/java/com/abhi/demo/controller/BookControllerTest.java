@@ -41,7 +41,7 @@ public class BookControllerTest {
         .andExpect(jsonPath("$[0].id").value(1))
         .andExpect(jsonPath("$[0].name").value("Effective database")).andExpect(
         jsonPath("$[0].author").value("ManuRS"))
-        .andExpect(jsonPath("$[0].ISBN").value("1212121234"));
+        .andExpect(jsonPath("$[0].isbn").value("1212121234"));
   }
 
   @Test
@@ -56,6 +56,6 @@ public class BookControllerTest {
         .andExpect(jsonPath("$.id").value(1))
         .andExpect(jsonPath("$.name").value("Harry Potter I")).andExpect(
         jsonPath("$.author").value("J.K Rowling"))
-        .andExpect(jsonPath("$.ISBN").value("8766665544"));
+        .andExpect(jsonPath("$.isbn").value("8766665544"));
   }
 }

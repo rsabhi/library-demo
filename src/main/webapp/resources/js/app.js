@@ -56,7 +56,7 @@ function initBookDataGrid() {
         {field: 'name', title: 'Name', width: '300px'},
         {field: 'author', title: 'Author', width: '120px'},
         {field: 'price', title: 'Price', width: '120px'},
-        {field: 'ISBN', title: 'ISBN', width: '200px'}
+        {field: 'isbn', title: 'ISBN', width: '200px'}
       ]
     ]
   });
@@ -83,7 +83,7 @@ function initBorrowedBooksDataGrid() {
         {field: 'name', title: 'Name', width: '250px'},
         {field: 'author', title: 'Author', width: '100px'},
         {field: 'price', title: 'Price', width: '100px'},
-        {field: 'ISBN', title: 'ISBN', width: '150px'}
+        {field: 'isbn', title: 'ISBN', width: '150px'}
       ]
     ]
   });
