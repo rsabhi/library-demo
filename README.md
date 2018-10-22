@@ -1,4 +1,4 @@
-# A Book Library Demo   
+# Library Book Borrower Demo
 
 Clone the library-demo project to local machine using the "git clone" command (in Windows use command tool or power shell, in mac OS, use the terminal)
 
