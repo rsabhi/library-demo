@@ -20,17 +20,14 @@ in github it will be found under the following location:
 (https://github.com/rsabhi/library-demo/blob/master/rest-script/book-library.postman_collection.json) 
 In local machine it will be found under "/library-demo/⁨rest-script"⁩ folder.
 
-Import the .json script in POSTMAN application. 
+Import the .json script (book-library.postman_collection.json) in to POSTMAN application. 
 
 1. FIRST Run the script (Run POST /demo/users/batch ) - This will update the user details 
 2. THEN Run the script (RUN POST /demo/books/batch). - This will list the book details 
 3. Refresh http://localhost:18082/demo/
 4. User details and books details are updated in the page
-5. click on "view" button in the Books borrowed column will show the list of books borrowed by the user.
+5. Click on "view" button in the Books borrowed column. This will show the list of books borrowed by the user.
 
-# Known issues: 
-1. There are couple of known issues which need to be handled. Currently ISBN number is kept as unique. Some crash around that area which is not adressed. 
-2. There is another crash for hibernate which I should fix in the table design area. "A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance:"
 
 
 
