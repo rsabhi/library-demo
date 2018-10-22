@@ -40,40 +40,11 @@ public class User implements Serializable {
 
   private String phoneNumber;
 
-  @OneToMany(mappedBy = "borrower", orphanRemoval = true)
-  @JsonIgnoreProperties({"books.borrower","borrower"})
+  @OneToMany(mappedBy = "borrower", orphanRemoval = false)
+  @JsonIgnoreProperties({"books.borrower", "borrower"})
   private Set<Book> books;
 
   public enum Gender {
     Male, Female
-  }
-
-  @Getter
-  @Setter
-  @EqualsAndHashCode(exclude = {"user"})
-  @ToString(exclude = {"user"})
-  @Entity
-  @Table(name = "book")
-  public static class Book implements Serializable {
-
-    private static final long serialVersionUID = 3828697271392552248L;
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Id
-    private long id;
-
-    private String name;
-
-    private String author;
-
-    private String price;
-
-    @Column(unique = true)
-    private String ISBN;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = true)
-    @JsonIgnoreProperties({"books"})
-    private User borrower;
   }
 }

@@ -18,7 +18,7 @@ function initPeopleDataGrid() {
         {field: 'name', title: 'Name', width: '120px'},
         {field: 'gender', title: 'Gender', width: '120px'},
         {field: 'address', title: 'Address', width: '300px'},
-        {field: 'phoneNumber', title: 'Tel', width: '200px'},
+        {field: 'phoneNumber', title: 'Telephone', width: '200px'},
         {field: 'action', title: 'Books Borrowed', width: "200px",
           formatter: function (v, row, i) {
             let books = JSON.stringify(row).replace(/"/g, "'");
@@ -131,9 +131,9 @@ function loadBorrowedBooksData(data) {
 }
 
 function initBasePage() {
-  initPeopleDataGrid(); // set up table for people
-  initBorrowedBooksDataGrid(); // set up the book view (books borrowed)
-  initBookDataGrid(); // table for book
-  loadPeopleData(); // load user data
-  loadBookData(); // load book data
+  initPeopleDataGrid();
+  initBorrowedBooksDataGrid();
+  initBookDataGrid();
+  loadPeopleData();
+  loadBookData();
 }

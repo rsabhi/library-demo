@@ -34,7 +34,7 @@ public class BookControllerTest {
     book.setId(1);
     book.setName("Effective database");
     book.setAuthor("ManuRS");
-    book.setISBN("1212121234");
+    book.setIsbn("1212121234");
     Set<Book> books = Collections.singleton(book);
     when(service.getAll()).thenReturn(books);
     mockMvc.perform(get("/books")).andExpect(status().isOk())
@@ -50,7 +50,7 @@ public class BookControllerTest {
     book.setId(1);
     book.setName("Harry Potter I");
     book.setAuthor("J.K Rowling");
-    book.setISBN("8766665544");
+    book.setIsbn("8766665544");
     when(service.get(anyLong())).thenReturn(book);
     mockMvc.perform(get("/books/1")).andExpect(status().isOk())
         .andExpect(jsonPath("$.id").value(1))

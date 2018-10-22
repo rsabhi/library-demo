@@ -17,8 +17,8 @@ import lombok.ToString;
 
 @Getter
 @Setter
-@EqualsAndHashCode(exclude = {"user"})
-@ToString(exclude = {"user"})
+@EqualsAndHashCode(exclude = {"borrower"})
+@ToString(exclude = {"borrower"})
 @Entity
 @Table(name = "book")
 public class Book implements Serializable {
@@ -35,8 +35,7 @@ public class Book implements Serializable {
 
   private String price;
 
-  @Column(unique = true)
-  private String ISBN;
+  private String isbn;
 
   @ManyToOne
   @JoinColumn(name = "user_id", nullable = true)
