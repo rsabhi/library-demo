@@ -5,10 +5,10 @@
 git clone https://github.com/rsabhi/library-demo.git
 
 ## How to start web application?
-Go to the directory where library-demo is downloaded. For eg: in mac machine I downloaded in Documents folder.
+Go to the directory where library-demo is downloaded. For eg: in mac OS download in Documents folder.
 "/Users/User-name/Documents/library-demo"
-then,
-Run command ```mvn jetty:run``` to start the web application.
+then, 
+Run command from library-demo directory, ```mvn jetty:run``` to start the web application.
 
 ## How to access web application locally?
 Open the browser and paste the following link in the address bar, http://localhost:18082/demo/
