@@ -1,7 +1,7 @@
 # A Book Library Demo   
 
-# clone the library-demo project to local machine using the "git clone" command
-(in Windows use command tool or power shell, in mac OS, use the terminal)
+clone the library-demo project to local machine using the "git clone" command (in Windows use command tool or power shell, in mac OS, use the terminal)
+
 git clone https://github.com/rsabhi/library-demo.git
 
 ## How to start web application?
