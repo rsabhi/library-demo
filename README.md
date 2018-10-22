@@ -13,12 +13,16 @@ Run command from library-demo directory, ```mvn jetty:run``` to start the web ap
 ## How to access web application locally?
 Open the browser and paste the following link in the address bar, http://localhost:18082/demo/
 
-## How to insert data (users and books)?
-So when starting the application and empty page will be displayed as we are storing the data in in memory. 
-Using a POSTMAN to import the .json file [book-library.postman_collection.json]
-in github it will be found under the following location:
+## How to view data (users and books)?
+So when starting the application an empty page will be displayed as we are storing the data as  inmemory DB. 
+
+To view the data, execute the REST API commands in POSTMAN application.
+
+Using POSTMAN application,  import the .json file [book-library.postman_collection.json]
+in github .json file is found under the following location:
 (https://github.com/rsabhi/library-demo/blob/master/rest-script/book-library.postman_collection.json) 
-In local machine it will be found under "/library-demo/⁨rest-script"⁩ folder.
+
+In local machine .json file will be found under "/library-demo/⁨rest-script"⁩ folder.
 
 Import the .json script (book-library.postman_collection.json) in to POSTMAN application. 
 
